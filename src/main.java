@@ -119,4 +119,14 @@ public class main {
             out.println(grupos.get(i).toString());
         }
     }
+    public static void altaAlumno() throws IOException {
+        Especialidad especialidad;
+        out.println("numControl: ");
+        int numControl = Integer.parseInt(data.readLine());
+        out.println("Nombre: ");
+        String nombre = dataString.readLine();
+        out.println("id Especialidad: ");
+        int idEspecialidad = Integer.parseInt(data.readLine());
+        alumnos.add(new Alumno(numControl,nombre,especialidades.get(idEspecialidad-1)));
+    }
 }
